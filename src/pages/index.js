@@ -8,11 +8,10 @@ import { useEffect, useState } from 'react'
 
 
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   let [pageNumber, setPageNumber] = useState(1)
-  let [fetchedData, updateFetchedData] = useState([])
+  let [fetchedData, updateFetchedData] = useState({results:[], info:{}})
   
   let {info, results} = fetchedData;
 
@@ -23,7 +22,8 @@ export default function Home() {
 
     (async function() {
 
-      let data = await fetch(charAPI).then(res => res.json())
+      let response = await fetch(charAPI)
+      let data = await response.json()
       updateFetchedData(data)
 
     })()
@@ -40,7 +40,7 @@ export default function Home() {
           </div>
           <div className='flex h-screen justify-evenly w-screen'>
             <FilterArea/>
-            <CharacterCardsArea results={results}/>
+            <CharacterCardsArea results={results} />
           </div>
         </div>
     </main>

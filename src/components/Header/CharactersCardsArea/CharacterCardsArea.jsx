@@ -1,24 +1,16 @@
 import CharacterCard from "./CharacterCard";
 
 function CharacterCardsArea({results}) {
-    
     let display;
-    console.log(results)
-
-    if(results){
-        display = results.map
+    if(results?.length > 0){
+        display = results.map((character) =><CharacterCard key={character.id} character={character}/>)
     } else {
-        display = "No characters found"
+        display = <p>"No characters found"</p>
     }
 
     return(
         <div className="w-10/12 flex rounded-xl bg-slate-800 mt-2">
-        <div className="flex">
             {display} 
-        </div>
-        <div>
-
-        </div>
         </div>
     )
 }
