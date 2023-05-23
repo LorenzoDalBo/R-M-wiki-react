@@ -1,13 +1,23 @@
 import CharacterCard from "./CharacterCard";
 
-function CharacterCardsArea() {
+function CharacterCardsArea({results}) {
+    
+    let display;
+    console.log(results)
+
+    if(results){
+        display = results.map
+    } else {
+        display = "No characters found"
+    }
+
     return(
         <div className="w-10/12 flex rounded-xl bg-slate-800 mt-2">
         <div className="flex">
-            <CharacterCard charName={"Lorenzo"} lastLoc={"A puta que pariu"} />  
+            {display} 
         </div>
         <div>
-            
+
         </div>
         </div>
     )
