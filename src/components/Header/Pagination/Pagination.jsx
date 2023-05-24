@@ -1,26 +1,14 @@
-function Pagination({pageNumber,setPageNumber}) {
-    
-    function next() {
-        setPageNumber((page) => page + 1)
-    };
+import ReactPaginate from 'react-paginate';
 
-    function prev() {
-        if(pageNumber === 1) return;
-        setPageNumber((page) => page - 1)
-    };
-
-    return(
-        <div>
-            <ul className="flex justify-around">
-                <li>
-                    <button onClick={prev}>Prev</button>
-                </li>
-                <li>
-                    <button onClick={next}>Next</button>
-                </li>
-            </ul>
-        </div>
-    )
+function Pagination({pageNumber,setPageNumber, info}) {
+    return <ReactPaginate nextLabel={"Next"}
+     previousLabel={"Prev"}
+      className='pagination justify-content-center flex' 
+      pageCount={info?.pages}
+      pageLinkClassName="page-link"
+      onPageChange={(data) => {
+        setPageNumber(data.selected + 1)
+      }}/>
     };
     
-export default Pagination;
+export default Pagination; 

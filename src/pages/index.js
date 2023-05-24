@@ -32,7 +32,7 @@ export default function Home() {
   } , [charAPI])
   
   
-    console.log(pageNumber)
+    console.log(info)
   return (
     <main>
         <div className='flex h-auto flex-col'>
@@ -44,7 +44,7 @@ export default function Home() {
             <CharacterCardsArea results={results} />
           </div>
           <div className='flex justify-center'>
-          <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}/>
+          <Pagination pageNumber={pageNumber} info={info} setPageNumber={setPageNumber}/>
           </div>
         </div>
     </main>
