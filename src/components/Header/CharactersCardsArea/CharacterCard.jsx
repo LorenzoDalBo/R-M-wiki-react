@@ -5,8 +5,8 @@ function CharacterCard({character}) {
                 <img className="w-1/2 border-2 border-solid border-blue-600 flex justify-center" src={character?.image}/>
             </div>
             <div className="text-start h-fit">
-                <h2 className="text-xl"><strong>{character?.name}</strong></h2>
-                <h3><strong className="text-base font-serif">Last location:<br></br></strong>{character?.location?.name}</h3>
+                <h2><strong className="text-xl">{character?.name}</strong></h2>
+                <h3 className="text-xl">Last location:<br></br><p className="text-base">{character?.location?.name}</p></h3>
             </div>
         </div>
     )

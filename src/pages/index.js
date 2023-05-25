@@ -4,6 +4,7 @@ import FilterArea from '@/components/Header/Filter/FilterArea'
 import CharacterCardsArea from '@/components/Header/CharactersCardsArea/CharacterCardsArea'
 import { useEffect, useState } from 'react'
 import Pagination from '@/components/Header/Pagination/Pagination'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
