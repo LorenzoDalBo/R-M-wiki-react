@@ -1,12 +1,12 @@
 function CharacterCard({character}) {
     return(
-        <div className="flex flex-col bg-slate-600 w-full rounded-xl h-48">
-            <div className="p-2 rounded-t-xl flex justify-center bg-slate-400">
-                <img className="w-24 h-auto" src={character?.image}/>
+        <div className="flex flex-col border-solid border-4 border-blue-600 bg-slate-400 w-full p-2 text-center h-auto rounded-xl">
+            <div className="flex justify-center">
+                <img className="w-1/2 border-2 border-solid border-blue-600 flex justify-center" src={character?.image}/>
             </div>
-            <div>
-                <h2>{character?.name}</h2>
-                <h3>Last location:{character?.location?.name}</h3>
+            <div className="text-start h-fit">
+                <h2><strong className="text-xl">{character?.name}</strong></h2>
+                <h3 className="text-xl">Last location:<br></br><p className="text-base">{character?.location?.name}</p></h3>
             </div>
         </div>
     )
