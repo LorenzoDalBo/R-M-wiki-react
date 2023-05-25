@@ -4,6 +4,7 @@ import SearchArea from '@/components/Header/SearchArea/SearchArea'
 import FilterArea from '@/components/Header/Filter/FilterArea'
 import CharacterCardsArea from '@/components/Header/CharactersCardsArea/CharacterCardsArea'
 import { useEffect, useState } from 'react'
+import Pagination from '@/components/Pagination/Pagination'
 
 
 
@@ -34,7 +35,7 @@ export default function Home() {
 
   return (
     <main>
-        <div className='flex h-screen flex-col'>
+        <div className='flex h-auto flex-col'>
           <div className='h-12 w-screen mt-4'>
           <SearchArea/>
           </div>
@@ -42,6 +43,7 @@ export default function Home() {
             <FilterArea/>
             <CharacterCardsArea results={results} />
           </div>
+          <Pagination/>
         </div>
     </main>
   )

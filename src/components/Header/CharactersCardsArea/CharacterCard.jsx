@@ -1,8 +1,8 @@
 function CharacterCard({character}) {
     return(
-        <div className="flex flex-col m-4 bg-slate-400 w-2/12 rounded-xl h-2/5">
-            <div>
-                <img src={character?.image}/>
+        <div className="flex flex-col bg-slate-600 w-full rounded-xl h-48">
+            <div className="p-2 rounded-t-xl flex justify-center bg-slate-400">
+                <img className="w-24 h-auto" src={character?.image}/>
             </div>
             <div>
                 <h2>{character?.name}</h2>
