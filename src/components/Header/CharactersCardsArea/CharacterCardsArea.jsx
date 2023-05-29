@@ -9,7 +9,7 @@ function CharacterCardsArea({results}) {
     }
 
     return(
-        <div className="w-10/12 grid p-2 gap-4 grid-cols-5 grid-rows-4 rounded-xl bg-slate-800 mt-2">
+        <div className="w-10/12 grid p-2 gap-4 grid-cols-5 grid-rows-4 rounded-xl mt-2">
             {display} 
         </div>
     )

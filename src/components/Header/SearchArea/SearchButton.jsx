@@ -1,6 +1,6 @@
 function SearchButton() {
     return(
-        <button className="w-1/5 bg-slate-500" placeholder="Search Characters...">Search</button>
+        <button className="w-1/5 border-solid border-blue-400 rounded-lg" placeholder="Search Characters...">Search</button>
     )
 }
 

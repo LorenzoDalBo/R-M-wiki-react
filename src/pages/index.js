@@ -15,6 +15,8 @@ export default function Home() {
   let [fetchedData, updateFetchedData] = useState({results:[], info:{}})
   let [search, setSearch] = useState("")
   
+
+  //Objeto literal = ((Não tem classe)(javascript) => JavaScript )
   let {info, results} = fetchedData;
 
   let charAPI = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
@@ -33,7 +35,7 @@ export default function Home() {
   } , [charAPI])
   
   
-    console.log(info)
+
   return (
     <main>
         <div className='flex h-auto flex-col'>
